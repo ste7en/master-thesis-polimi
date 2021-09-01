@@ -320,25 +320,33 @@ Master of Science in\\
 \fi
 \end{center}
 
-\ifcsname printSupervisor\endcsname
-\noindent Supervisor:\\
-    \textsc{\printSupervisor}
-\fi
 
-\ifcsname printCoSupervisors\endcsname
-  \ifnum\value{CoSupervisors}>0
-    \vspace{6px} \noindent Co-Supervisor%
-    % add final 's' if more than one Co-Supervisor
-    \ifnum\value{CoSupervisors}>1s\fi:\\
-    \textsc{\printCoSupervisors}
-  \fi
-\fi
 
-\ifcsname printAuthor\endcsname
-\flushright
-MSc Thesis by:\\[0.1cm]
-	\printAuthor
-\fi
+\begin{minipage}[t]{0.5\textwidth}
+    \ifcsname printSupervisor\endcsname
+    \noindent Supervisor:\\
+        \textsc{\printSupervisor}
+    \fi
+    
+    \ifcsname printCoSupervisors\endcsname
+        \ifnum\value{CoSupervisors}>0
+            \vspace{6px} \noindent Co-Supervisor%
+            % add final 's' if more than one Co-Supervisor
+            \ifnum\value{CoSupervisors}>1s\fi:\\
+            \textsc{\printCoSupervisors}
+        \fi
+    \fi
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \ifcsname printAuthor\endcsname
+    \flushright
+        MSc Thesis Authors:\\[0.1cm]
+	    \printAuthor
+    \fi
+\end{minipage}
+
+
+
 
 \ifcsname printYear\endcsname
 \vfill

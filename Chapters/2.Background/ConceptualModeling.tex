@@ -1,4 +1,4 @@
-\section{Conceptual Modeling}
+\section{Conceptual Modeling in XR}
 \label{sec:background-conceptual}
 
 Bille et al.~\cite{bille_conceptual_2007} define conceptual modeling as \textit{the activity of building a model of the Universe of Discourse (UoD) in terms of concepts that are familiar to domain experts and free from any implementation details}. The Universe of Discourse is the slice of the world we want to explore. 
@@ -44,13 +44,13 @@ Chevallier et al.~\cite{chevaillier_semantic_2012} implement another framework b
 
 Multimodal interaction techniques are the subject of the event state-driven graphical notation presented by Vanacken et al.~\cite{grapp06}. The primitives that constitute it are the states and events, the task chain that must be executed, the data that these carry through states, the transition and conditional states, the hierarchical usage and the input/output parameters.  Even in this case, a framework based on the XML schema is attached to encapsulate the primitives and execute the interactions.
 
-These models, based on standard languages belonging to the software engineering domain, are limited when applying knowledge-based models as they have to be rendered at runtime.
+These models, based on standard languages belonging to the software engineering domain, are limited when applying knowledge-based models as they have to be rendered at run-time.
 
 \subsection{Comparative study}
 
 After reviewing the numerous articles relating to the study that is the subject of this thesis, it was decided to narrow down the overview of conceptual models by selecting three works found in the literature.
 
-The resulting analysis was relevant to underline the features, to understand the strengths and weaknesses of each of them so as to guide the proposal of this thesis. The tables below summarises their main characteristics. 
+The resulting analysis was relevant to underline the features, to understand the strengths and weaknesses of each of them so as to guide the proposal of this thesis. The tables below summarizes their main characteristics. 
 
 \begin{table}
 \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3cm}|} 
@@ -77,7 +77,7 @@ Informal Language
 
 The starting point for this analysis is the modelling language \textit{Approach} (\autoref{table:Approach}) pursued by the three concerned studies. The one that most closely follows a standard language is MASCARET \cite{chevaillier_semantic_2012}, whose authors argue for basing their model on an existing metamodel such as UML \cite{fowler_uml_2000} rather than building a new one. Since it is an extensible language, it is no longer aimed exclusively at software engineering, given its widespread use and semantic clarity. Within the stated strengths, the potential for experts to implement platform-independent models in their domain clashes with one of the main challenges raised in De Troyer et al.~\cite{de_troyer_conceptual_2007}, which prompted them to define a new language that is also accessible to non-professional backgrounds. 
 The most popular general purpose conceptual modelling languages such as ER \cite{chen_context-aware_2019} and ORM \cite{halpin_conceptual_1995} can only model the static features in the application domain. Even though the UML also provides diagrams for drawing dynamic systems that describe the behaviour of objects as well as their appearance, the mechanisms are cumbersome, the amount of notions being too large to risk of causing ambiguity. However, this did not lead the authors of VR-WISE to exclude principles recalling the definition of object types and classes, typical of OOP, like Concepts, properties and instances of concepts. 
-As to Gianotti et al.~\cite{dobbie_modeling_2020}, it bypasses the use of a standard language and addresses the lack of attention to human-related aspects in the existing models (within ISS) by proposing a solution centred on perceived interaction at different levels of abstraction. In this regard, therefore, the aim is to provide a set of tools that can be understood and enjoyed by the user, the main protagonist of the experience. 
+As to Gianotti et al.~\cite{dobbie_modeling_2020}, it bypasses the use of a standard language and addresses the lack of attention to human-related aspects in the existing models (within ISS) by proposing a solution centered on perceived interaction at different levels of abstraction. In this regard, therefore, the aim is to provide a set of tools that can be understood and enjoyed by the user, the main protagonist of the experience. 
 
 \begin{table}
 \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3cm}|} 

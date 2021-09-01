@@ -1,2 +1,63 @@
 \section{Structural Model}
 \label{sec:conceptual-structural}
+
+The structural model is the first half of the XR Conceptual Model Framework. It comprises all participants in the experience, whether implicit or explicit. They constitute the static modeling part, where the components are selected according to the requirements of the application. The structure elected to represent them is a hierarchy of elements with a top-down concreteness approach, whose levels of abstraction are qualitatively marked and identified by a legend of different colors as seen in Figure X.X. The building blocks of the tree are linked by an "is a" relation which indicates that between two units one of the two is a generalization of the other which is then a sort of subclass, a child node that inherits from the father \cite{brachman_what_1983}. Moreover, there is a mereology relation, or so-called composition relation, which is graphically represented with the shape of a full diamond to indicate how a block combining with others can contribute to compose new ones. 
+
+At the summit of the structure stands the entity \textbf{Actor}. It embodies a fundamental concept in the field of human-computer interaction, which tends to identify it purely with the human factor. In literature it has been defined "as a placeholder for an object when specifying behavior" \cite{de_troyer_conceptual_2007}, i.e. it becomes a way to qualify an abstract object as a system capable of performing actions, stimulating, interacting or reacting to user behavior. The structural model of the XR Conceptual Model Framework distinguishes in the second abstraction level two macro-categories of Actors: 
+\begin{itemize}
+    \item \textbf{Human Actor}: The Human Actor is a type of actor that is generally considered as another component of the system whose characteristics are crucial in the design of the interaction process with the machine \cite{bannon_discovering_1989}. The presence of a distinction of the Actor between Human and Non-Human arises from the need to elevate the Human from a passive element to an element able to act in an environment, embody and manage a behavior, rather than being a mere producer of an output information flow. In an interactive system, the Human Actor is none other than the user, the one who uses an application or a device, any technological system through which they perform actions. 
+    \item \textbf{Non-Human Actor}: The Non-Human Actor incorporates different types of actors, each with characteristics that must be specified at the design stage. With this term we want to include all the technological components of a system that participate in the interaction allowing the user to perform certain actions. The results of the interaction are also visible on them.  We can recognize three main sub-categories of Non-Human Actors together with their properties:
+    \begin{itemize}
+        \item \textbf{Physical Components}: Physical Components represent interactive elements of an entirely physical nature, therefore belonging to the real world (Figure). However, they can generate system events or participate in user interactions, receive user commands, trigger other events, etc. \\
+        Physical Components Properties
+        \begin{itemize}
+            \item Id: a unique identification code.
+            \item Position: spatial coordinates (x, y, z) that locate and track the position of the component.
+        \end{itemize}
+        There are two types of Physical Components that we have found:
+        \begin{itemize}
+            \item \textbf{Interaction Placeholder}: Interaction Placeholders include all identifiable elements i.e. images, codes, symbols such as the QR Code that is recognized by the camera of the device in order to trigger an effect on another Non-Human Actor. However, wireless devices such as Beacons and RFIDs are not excluded.
+            \item \textbf{Device}: Devices are represented by all the Physical Components that support the application in XR, VR or AR and can be of different nature depending on the technology involved in the designed experience. One or more devices can be included depending on the interaction to be performed. Examples include smartphones, tablets, viewers, card-boards, HMDs, etc.
+        \end{itemize}
+
+        \item \textbf{Environment}: Environment represents an element that can have a dual nature. It can identify the real world that can be made of physical objects combined with virtual ones. Otherwise it can be represented by a world seen through a networked application, a tool supported by a device chosen according to the type of experience designed for the user. In this last case, the Environment is characterized by a fundamental element: the camera, a device that captures and shows the world to the player. Often the Environment, independently from its nature, is identified with the term "scene", in other cases, instead, the word scene is used to identify the different sub-parts in which it is divided. \\
+        Environment Properties:
+        \begin{itemize}
+            \item Camera Position: spatial coordinates (x, y, z) that locate and track the position of the camera.
+            \item Camera Orientation: polar coordinates ($\rho$, $\phi$, $\gamma$) that locate and track the camera orientation.
+            \item Visibility: property that enables or disables the possibility for the user to see the Environment. When in Off mode, the Environment has been triggered but is not visible, i.e. it is hidden from the user's view. 
+        \end{itemize}
+        A distinction is made between three sub-categories of Environment:
+        \begin{itemize}
+            \item \textbf{Augmented Environment}: Augmented Environment (AE) places virtual components in a physical environment, giving them a spatial mapping through the concept of spatial anchors. The anchors are elements that the software can recognize, and thus build the experience around the real world by integrating it with the virtual one. Furthermore, AE encapsulates the concept of physical (external) space dimensions, represented as coordinates. It also adds three dimensions where otherwise there would only be one layer superimposed on the users' camera.\\
+            Properties of the augmented environment:
+            \begin{itemize}
+                \item World Anchors: these are used by the AR experience to locate the content.
+            \end{itemize}
+            \item \textbf{Virtual Environment}: Virtual Environment: Virtual Environment  is a completely rendered environment that has the characteristic to be navigated and interacted with by the users, of which one or more of their five senses are simulated in real-time \cite{guttentag_virtual_2020}. Its background can be seen as a texture. It places the virtual objects  according to a pure virtual concept of dimensions.
+            Virtual Environment Properties:
+            \begin{itemize}
+                \item World Anchors: these are used by the VR experience to locate the content.
+            \end{itemize}
+            \item \textbf{360$^{\circ}$Video Environment}: 360$^{\circ}$ Video Environment is represented by a VE that can only be navigated by rotating the device (yaw, pitch, roll) and interacted by buttons superimposed onto the video. The position of the user cannot be changed and overlaps with the position of the camera.
+            360° Video Environment Properties:
+            \begin{itemize}
+                \item Duration: Duration indicates the amount of time the 360$^{\circ}$Video takes.
+            \end{itemize}
+        \end{itemize}
+        
+        \item \textbf{Virtual Object}: Virtual Object in the hierarchy shown (Figure) is linked to Environment by a "part of" relationship which, as mentioned above, is meant to emphasize that an entity is composed of sub-entities. \\
+        Virtual Object Properties:
+        \begin{itemize}
+            \item Position: spatial coordinates that locate and track the position of the virtual object. These coordinates can be of three types:
+            \begin{itemize}
+                \item Absolute 
+                \item Component-related 
+                \item User-related 
+            \end{itemize}
+            \item Orientation: polar coordinates ($\rho$, $\phi$, $\gamma$) that locate and track the orientation of the virtual object.
+        \end{itemize}
+        The Virtual Objects can be divided in 2 sub-categories:
+        
+    \end{itemize}
+\end{itemize}
