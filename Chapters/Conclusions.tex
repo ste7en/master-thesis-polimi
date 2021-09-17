@@ -1,14 +1,22 @@
-\chapter{Conclusions and Future Works}
+\chapter{Conclusions}
 \label{ch:conclusions}
+The large diffusion that XR applications have achieved in the last years has also resulted in a considerable interest in the high-level design of XR experiences. Considering an intermediate level, which abstracts from implementation but focuses on content organisation and planning, results in a reduction of the time needed for interventions, optimising the resources available and team's efficiency, usually composed of people with heterogeneous backgrounds.
 
-In this chapter, you present the conclusions of your thesis and a couple of possible future works to extend your results. First of all, you should briefly repeat the problem you addressed in the thesis. Then, you report your achievements and how they improve the state of the art.
+In this thesis we analyzed the problem of a lack of modelling languages to describe cross-reality environments, comparing existing works in conceptual modelling, interaction techniques and design methods related to \gls{AR}, \gls{VR}, \gls{MR}. 
+Our findings reveal that most of them have a domain-specific nature, being conceived on ad-hoc bases; we identified the common design characteristics of \gls{XR} applications from a structural, behavioural and interactional perspective, proposing the XRM Conceptual Model as general-purpose tool at support of the high-level design stage.
+The XRM has been used to a real-world system aimed at developing XR applications in a code-less environment, the ART Framework, resulting in the implementation of the ART Editor for the description of their structural, behavioural and interactional features.
+Both solutions have been validated with the tourism industry use case, providing examples of their application in the modelling of a cultural heritage site experience; moreover, we tested and analyzed the usability of ART Editor in a user study based on the standard ISO 9241-11, whose results indicated that our proposal satisfies the effectiveness and efficiency metrics and it qualifies as "Highly Acceptable" in compliance with the average score of the \gls{SUS} Questionnaire.
 
-\section{Conclusions}
-\begin{example}
-In this thesis, we analyzed the problem of ... . We proposed a new approach that ... . We tested this method on ... . Reported results show that our proposal outperforms the state of the art method.
-\end{example}
+We can finally state that the design features of Extended Reality (XR) that are fundamental to the development of XR applications and that can be modelled by structural, behavioural and interaction properties, can be represented by all the primitives illustrated in the \autoref{ch:conceptual-model}. There are Actors, which classify and distinguish the participants of the experience, they are organised in hierarchical structures distinguished by levels of abstraction. The User Actions, which represent the behaviours of the Human Actors, and the Effects, which represent changes in the structural properties of the Actuator actors. Interactions, which are a building block that encloses the user, the actions they perform and the Target actors on which they are performed. Tasks, which correlate the interaction/system events with their generated effects and finally there are Activities, which organise a flow of Tasks in diagrams.
 
-\section{Future works}
-\begin{example}
-There are several appealing paths for future works. A possible extension could be to ... .
-\end{example}
+Furthermore, we can say that a High-Level Authoring Tool can make the creation of XR experiences accessible also to non-experts, since thanks to the ART Editor it is possible to design experiences involving one or all the technologies included in the "XR umbrella". The Editor requires no basic programming knowledge and features a clear and intuitive UI.
+The benefits in terms of effectiveness, efficiency and satisfaction measured by qualitative and quantitative data were experimentally evaluated in a usability test, the results of which confirmed the power and effectiveness of the proposed tool.
+
+\clearpage
+\section{Future Works}
+\label{sec:future-works}
+The proposed conceptual model needs further improvement, however even at its current state it has proven to be effective in designing complex experiences involving multiple technologies, as is evident from the case study reported in this thesis. Our user-centred approach may pioneer further innovative methods for conceptual design in XR. 
+This is particularly important in contexts - such as cultural heritage - where XR applications have significant potential for the tourism industry, but there is a need for more real-world cases to which the model can be applied. This means looking for new opportunities to design XR, VR or AR experiences so that all designers can benefit from a tool like XRM, which does not require any knowledge of the underlying implementation. 
+Several improvements could also be addressed to the ART Editor, which is currently very essential in its functionalities. Although its simplicity makes it intuitive even for those who are not XR experts, it is open to the introduction of new features such as a working backend connection with the intended system CMS, a more visible distinction of scenes' organization and a real-time simulation of the designed state diagram.
+
+In the context of ART project, both the XRM and the ART Editor are planned to be testes on a large-scale experiment in November 2021 during a pan-European Hackathon event organized by EIT Digital in collaboration with its partners that will involve a lot of students. Furthermore, the full integration of the editor into ART Framework is expected in the next months, allowing the validation of the interaction authoring tool as an intermediate step between the digital assets uploading phase and the on-site authoring phase.

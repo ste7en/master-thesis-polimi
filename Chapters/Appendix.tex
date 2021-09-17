@@ -1,18 +1,913 @@
-\chapter{Notation}
+\chapter{Appendix}
+\label{appendix}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{c l} \hline
-\textbf{Notation}&\textbf{Description} \\ \hline
-$G$&influence graph\\
-$V$&set of nodes of $G$\\
-$E$&set of edges of $G$\\
-$W$&set of influence weights corresponding to each edge in $E$\\
-$w_{u,v}$&weight of edge $(u,v)$\\
-$n$&$|V|$, number of nodes\\
-$m$&$|E|$, number of edges\\
-\hline
-\end{tabular}
-\caption{Notation used.}
-\label{tab:thesis_notation}
-\end{table}
+\section{JSON State Diagram Example}
+\begin{lstlisting}[caption={JSON State Diagram Example}, label=json-schema-example,basicstyle=\ttfamily\footnotesize]
+{
+  "ARTRecipeID": "32fcf660-7eb5-4edc-b313-e7731fc37389",
+  "Name": "example",
+  "Description": "Hello, world!",
+  "ListOfObjects": [
+    {
+      "type": "2d_video",
+      "id": 1
+    }
+  ],
+  "ListOfStates": [
+    {
+      "Name": "state",
+      "InitState": true,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "2d_video",
+          "id": 1,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "multimedia_pause",
+              "options": {}
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action",
+          "Inputs": [
+            {
+              "type": "2d_video",
+              "id": 1,
+              "decorations": [
+                {
+                  "type": "event_tap",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state2"
+        }
+      ]
+    },
+    {
+      "Name": "state2",
+      "InitState": false,
+      "EndState": true,
+      "Objects": [
+        {
+          "type": "2d_video",
+          "id": 1,
+          "decorations": [
+            {
+              "type": "multimedia_play",
+              "options": {
+                "loop": true
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": []
+    }
+  ]
+}
+\end{lstlisting}
+
+
+\section{JSON State Diagram NURE Case study}
+\begin{lstlisting}[caption={JSON State Diagram NURE Case study}, label=json-schema-NURE,basicstyle=\ttfamily\footnotesize]
+{
+  "ARTRecipeId": "88f4df4b-8bf2-4fd6-ae1e-f8fa3ec3a8b4",
+  "Name": "NURE Case Study",
+  "Description": "State Diagram of the NURE Experience case study.",
+  "ListOfObjects": [
+    {
+      "type": "3d_scene",
+      "id": 20
+    },
+    {
+      "type": "3d_model",
+      "id": 4
+    },
+    {
+      "type": "3d_model",
+      "id": 5
+    },
+    {
+      "type": "3d_model",
+      "id": 8
+    },
+    {
+      "type": "3d_model",
+      "id": 6
+    },
+    {
+      "type": "3d_model",
+      "id": 7
+    },
+    {
+      "type": "3d_scene",
+      "id": 10
+    },
+    {
+      "type": "menu",
+      "id": 2
+    },
+    {
+      "type": "menu",
+      "id": 3
+    },
+    {
+      "type": "3d_scene",
+      "id": 22
+    },
+    {
+      "type": "3d_model",
+      "id": 9
+    },
+    {
+      "type": "3d_video",
+      "id": 11
+    },
+    {
+      "type": "qr_code",
+      "id": 31
+    },
+    {
+      "type": "menu",
+      "id": 32
+    },
+    {
+      "type": "3d_scene",
+      "id": 30
+    }
+  ],
+  "ListOfStates": [
+    {
+      "Name": "state",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_scene",
+          "id": 20,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 4,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "visibility_blinking",
+              "options": {
+                "loop": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 5,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "visibility_blinking",
+              "options": {
+                "loop": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 8,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "visibility_blinking",
+              "options": {
+                "loop": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 6,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "visibility_blinking",
+              "options": {
+                "loop": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 7,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            },
+            {
+              "type": "visibility_blinking",
+              "options": {
+                "loop": false
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action",
+          "ListOfInputs": [
+            {
+              "type": "3d_model",
+              "id": 6,
+              "decorations": [
+                {
+                  "type": "event_swipe",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state2"
+        },
+        {
+          "Name": "action2",
+          "ListOfInputs": [
+            {
+              "type": "3d_model",
+              "id": 7,
+              "decorations": [
+                {
+                  "type": "event_swipe",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state3"
+        },
+        {
+          "Name": "action3",
+          "ListOfInputs": [
+            {
+              "type": "3d_scene",
+              "id": 20,
+              "decorations": [
+                {
+                  "type": "event_proximity_out",
+                  "options": {
+                    "time": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "NextState": "state6"
+        }
+      ]
+    },
+    {
+      "Name": "state2",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_model",
+          "id": 6,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action2",
+          "ListOfInputs": [
+            {
+              "type": "3d_model",
+              "id": 7,
+              "decorations": [
+                {
+                  "type": "event_swipe",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state3"
+        },
+        {
+          "Name": "action3",
+          "ListOfInputs": [
+            {
+              "type": "3d_scene",
+              "id": 20,
+              "decorations": [
+                {
+                  "type": "event_proximity_out",
+                  "options": {
+                    "time": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "NextState": "state6"
+        }
+      ]
+    },
+    {
+      "Name": "state4",
+      "InitState": true,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_scene",
+          "id": 10,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action4",
+          "ListOfInputs": [
+            {
+              "type": "menu",
+              "id": 2,
+              "decorations": [
+                {
+                  "type": "event_tap",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state"
+        }
+      ]
+    },
+    {
+      "Name": "state5",
+      "InitState": true,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_scene",
+          "id": 10,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action5",
+          "ListOfInputs": [
+            {
+              "type": "3d_scene",
+              "id": 10,
+              "decorations": [
+                {
+                  "type": "event_proximity_out",
+                  "options": {
+                    "time": 10
+                  }
+                }
+              ]
+            },
+            {
+              "type": "3d_scene",
+              "id": 20,
+              "decorations": [
+                {
+                  "type": "event_proximity_in",
+                  "options": {
+                    "time": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "NextState": "state"
+        }
+      ]
+    },
+    {
+      "Name": "state3",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_model",
+          "id": 7,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action",
+          "ListOfInputs": [
+            {
+              "type": "3d_model",
+              "id": 6,
+              "decorations": [
+                {
+                  "type": "event_swipe",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state2"
+        },
+        {
+          "Name": "action3",
+          "ListOfInputs": [
+            {
+              "type": "3d_scene",
+              "id": 20,
+              "decorations": [
+                {
+                  "type": "event_proximity_out",
+                  "options": {
+                    "time": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "NextState": "state6"
+        }
+      ]
+    },
+    {
+      "Name": "state6",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_model",
+          "id": 4,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 5,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 6,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 7,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action8",
+          "ListOfInputs": [
+            {
+              "type": "menu",
+              "id": 3,
+              "decorations": [
+                {
+                  "type": "event_tap",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state7"
+        }
+      ]
+    },
+    {
+      "Name": "state7",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_scene",
+          "id": 22,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_model",
+          "id": 9,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action7",
+          "ListOfInputs": [
+            {
+              "type": "3d_model",
+              "id": 8,
+              "decorations": [
+                {
+                  "type": "event_tap",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state8"
+        }
+      ]
+    },
+    {
+      "Name": "state8",
+      "InitState": false,
+      "EndState": false,
+      "Objects": [
+        {
+          "type": "3d_model",
+          "id": 9,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_video",
+          "id": 11,
+          "decorations": [
+            {
+              "type": "multimedia_play",
+              "options": {
+                "loop": true
+              }
+            },
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": [
+        {
+          "Name": "action10",
+          "ListOfInputs": [
+            {
+              "type": "qr_code",
+              "id": 31,
+              "decorations": [
+                {
+                  "type": "recognition_read",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state9"
+        },
+        {
+          "Name": "action12",
+          "ListOfInputs": [
+            {
+              "type": "menu",
+              "id": 32,
+              "decorations": [
+                {
+                  "type": "event_tap",
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": "state9"
+        }
+      ]
+    },
+    {
+      "Name": "state9",
+      "InitState": false,
+      "EndState": true,
+      "Objects": [
+        {
+          "type": "3d_scene",
+          "id": 30,
+          "decorations": [
+            {
+              "type": "visibility_visible",
+              "options": {
+                "opacity": "100%",
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "3d_scene",
+          "id": 22,
+          "decorations": [
+            {
+              "type": "visibility_hidden",
+              "options": {
+                "animate": false,
+                "duration": 0,
+                "wait": 0
+              }
+            }
+          ]
+        }
+      ],
+      "ListOfTransitions": []
+    }
+  ]
+}
+
+\end{lstlisting}
+
+\clearpage
+\section{SUS Questionnaire}
+\label{appendix:sus}
+
+\newcolumntype{P}{>{\centering\arraybackslash}p{0.75cm}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}m{0.2\textwidth}}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}m{0.2\textwidth}}
+
+\newcommand{\usetbl}{%
+  \begin{tabular}{@{}|*5{P|}@{}}
+    \hline
+    1 & 2 & 3 & 4 & 5 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand\prop[1]{%
+  \item
+  \parbox[t]{0.5\textwidth}{#1}%
+  \qquad
+  \parbox[t]{0.5\textwidth}{\usetbl}%
+}
+
+\hspace*{0.625\textwidth}%
+\begin{tabularx}{0.5\textwidth}{@{}LR@{}}
+  \textbf{Strongly} & \textbf{Strongly} \\
+  \textbf{Disagree} & \textbf{Agree} \\
+\end{tabularx}
+ 
+\begin{enumerate}
+\prop{I think that I would like to use this system frequently}
+
+\prop{I found the system unnecessarily complex}
+
+\prop{I thought the system was easy to use}
+
+\prop{I think that I would need the support of a technical person to be able to use this system}
+
+\prop{I found the various functions in this system were well integrated}
+
+\prop{I thought there was too much inconsistency in this system}
+
+\prop{I would imagine that most people would learn to use this system very quickly}
+
+\prop{I found the system very cumbersome to use}
+
+\prop{I felt very confident using the system}
+
+\prop{I needed to learn a lot of things before I could get going with this system}
+
+
+\end{enumerate}
+
+
+\section{Open Ended Questionnaire}
+\label{appendix:openended}
+\begin{enumerate}
+    \item Please tell us more about what were your main problems during the use of the tool.
+    \item Please tell us more about what you liked of the tool.
+    \item Any further comment.
+    \item Do you have some experience in Augmented Reality/Virtual Reality development?
+    \item Do you have a Computer Science background?
+\end{enumerate}
+
+\section{Sub-tasks}
+\label{appendix:subtasks}
+\begin{longtable}{ll}
+Task 1 &                              \\ \hline
+\endfirsthead
+%
+\endhead
+%
+       & 3D Model placement           \\
+       & Add Visible tag              \\
+       & Action Node with 3D Model    \\
+       & Tap Action Tag               \\
+       & Link between nodes           \\
+       & Linked State Node            \\
+       & Add 2D Text                  \\
+       & Add Visible tag              \\
+       & Keep coherent IDs            \\
+       &                              \\
+Task 2 &                              \\ \hline
+       & 2D Video placement           \\
+       & Add Visible tag              \\
+       & Action Node with 2D Video    \\
+       & Link between nodes           \\
+       & Tap Action Tag               \\
+       & Final state on play          \\
+       & Visible tag options          \\
+       & Change label name            \\
+       & On play tag options          \\
+       & Keep coherent IDs            \\
+       &                              \\
+Task 3 &                              \\ \hline
+       & Add Visible tag              \\
+       & Set opacity to 90\%          \\
+       & Add 2 Action Nodes           \\
+       & Tap Action Tag               \\
+       & Final state on play          \\
+       & Add Proximity Out tag        \\
+       & Link the action backwards    \\
+       & Proximity Out tag options    \\
+       & On play tag loop option      \\
+       & Keep coherent IDs            \\
+       &                              \\
+Task 4 &                              \\ \hline
+       & Change recipe name           \\
+       & Add Audio off tag            \\
+       & Add Subtitles on tag         \\
+       & Add 3D Model                 \\
+       & Add 3D Video                 \\
+       & Add Proximity Out action tag \\
+       & Add Proximity In action tag  \\
+       & Add Blink tag                \\
+       & Add Hidden tag               \\
+       & Keep coherent IDs            \\
+       & Save the experience         
+\end{longtable}

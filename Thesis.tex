@@ -12,7 +12,11 @@
 %*****************************************************************
 
 % Should you need to add custom packages, this is the right place.
-
+\usepackage{array,tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{svg}
+\usepackage[utf8]{inputenc}
 %*****************************************************************
 %                      THESIS CUSTOMIZATIONS                      
 %*****************************************************************
@@ -59,7 +63,7 @@
 \department{Dipartimento di Elettronica, Informazione e
  Bioingegneria}
 \course{Computer Science and Engineering}
-\title{A Fancy Title\\for a Fancy Thesis}
+\title{Modelling and Authoring Extended Reality Applications: Conceptual and Technological Tools}
 \supervisor{Prof.ssa Franca Garzotto}
 % You can specify more than one co-supervisor, separating them
 % with commas.
@@ -81,7 +85,7 @@
 \maketitle
 
 % Optional, comment or delete instruction to remove
-\dedication{Insert here your dedication.\\Optional.}
+\dedication{Doveva andà così,\\fratellì.}
 
 % Chapters
 \frontmatter
@@ -109,8 +113,9 @@
 
 \appendix
 \input{Chapters/Appendix}
-\input{Chapters/Thanks}
+%\input{Chapters/Thanks}
 
+\dedication{“E questo è quanto.”\\-- Max Planck}
 %*****************************************************************
 %                         REFERENCE LIST                         
 %*****************************************************************
@@ -119,6 +124,7 @@
     Biblio/biblio, 
     Biblio/Background/xr-in-tourism,
     Biblio/Background/conceptual_models,
-    Biblio/Background/authoring_tools}
+    Biblio/Background/authoring_tools,
+    Biblio/Background/VRauthoringtools}
 
 \end{document}

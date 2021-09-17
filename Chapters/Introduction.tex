@@ -1,16 +1,71 @@
 \chapter{Introduction}
 
 \section{Context}
-This is basically an extension of the abstract. Here you provide context for the problem faced. Keep in mind that even if you now have gained expertise on it, most of the readers are no so inside the problem as you are. Start from the basics and explain clearly. You can also introduce here some hints about the methodology and your contribution. For this purpose, you may also decide to add more sections.
+The Covid-19 pandemic situation has negatively impacted the tourism and events business sectors and thus the economy of many cities in Italy, strongly dependent on this sector.
+ART (Augmented Reality for Tourism) is a project aiming at offering an innovative Extended Reality (XR) toolset to build services targeting the tourism sector, starting from the Italian market.
+Thanks to solutions developed in ART, XR services and experiences will become more accessible and economically feasible, offering tourism actors a way to be more resilient to an emergency situation and safer experiences to their visitors.
+Thanks to this framework, despite the current limitations regarding gatherings of people, the attractiveness of a city and its touristic points of interest will be partly supported by those actors that will invest in XR technologies, digitizing their assets and offering multiple experiences for visitors during their digital journeys, both while connecting remotely and while visiting physically.
+The ART project will enhance visitors’ experience while simplifying the authoring work for the service provider. The project aims at developing a XRaaS platform, or XR as a Service, offering the opportunity to easily create multi-device XR applications starting from existing 3D models. It is mainly meant for small-medium businesses, without expertise in developing XR applications, who want to offer immersive experiences to their final customers. To achieve this, the main feature of ART will be the capability of linking the 3D content to the real world using XR helmets and a specific authoring application.
+
+The ART project\footnote{\url{https://outoftheframe.art}} is funded by EIT Digital\footnote{\url{https://www.eitdigital.eu}} with the strategic partnership of companies as Telecom Italia (TIM) and FifthIngenium S.r.l.s.\footnote{\url{https://fifthingenium.com}} and the academic collaboration of Technische Universität Berlin (TUB) and Politecnico di Milano. This thesis is the result of the authors' work based on a company internship at Fifthingenium. 
+The internship lasted 4 months during which, in a first phase, we focused on the study of XR technology and its components with the aim of designing and iteratively refining a conceptual model with all its features, and in a second phase, we contributed to the creation of an online editor designed for XR experiences.
+The company also provided us with some projects, examples of real case studies that could help us define our model. 
+
+The NURE experience is the case study used in this thesis to validate our proposal. 
+NURE\footnote{\url{https://www.nurearcheologia.it}} is an organisation that was created to supply integrated services for archaeology; it is a production and work cooperative established in 2010 and based in Isili (SU), Sardinia. For almost ten years it has been involved in the management of archaeological excavations and museums, archaeological surveys, scientific assistance in restoration and conservation consolidation of monuments, preventive archaeology, cultural heritage education, museum design and layout, and the valorisation, promotion and management of archaeological sites and landscapes. 
+NURE is responsible for the archaeological area of Santa Lucia di Assolo (OR), a very interesting multi-layered site that preserves important traces from the Bronze Age to the Middle Ages, with the ruins of an imposing polylobate nuraghe with its village (XIV-IX century BC), a terma, a road and several dwellings from the Imperial Roman period (III-IV century AD). There is also a Paleochristian sepulchral area with numerous tombs and a patrician funerary mausoleum located in the immediate proximity of the church, which was originally built in the Byzantine period (7th century).
+In collaboration with NURE, we contributed to a Mixed Reality Musealization project of the archaeological area located in Santa Lucia di Assolo (OR), whose aim was to "revive" some very ancient archaeological sites thanks to the use of recent XR technologies.
+
+
+\section{Research Questions}
+An increasing trend on XR applications has been found in the last years, however literature lacks research into development of high-level design tools abstracting from the implementation, resulting mostly in tailor-made techniques. A non-technology dependant model is needed in order to allow the development of cross-reality experiences and let designers focus on relevant aspects as structural, behavioural and interaction, reducing time and resources in communication efforts within the team. At the same time, a lack of technical expertise -- usually required by traditional development environments -- prevents authors from building the experience. Therefore this work aims at answering the following research questions:
+\begin{itemize}
+    \item[RQ.1]\emph{What design characteristics of Extended Reality (XR) are useful, and how can they be modelled by structural, behavioral and interaction properties in a human-centered designed conceptual framework?}
+
+    \item[RQ.2]\emph{Can a High-Level Authoring Tool facilitate the creation of XR experiences for non-expert people? What are the benefits in terms of effectiveness, efficiency and satisfaction as measured by qualitative and quantitative data?}
+\end{itemize}
+
+We answer these questions proposing an innovative and flexible conceptual model to describe XR experiences whose its submodels have the goal to define the appearance and properties of the entities -- including the user -- that structure the application, their behaviour and their resulting perceivable changes of initial properties in order to compose the activities that the user can address within the experience. In addition to this, we adapted the proposed conceptual model in the frame of the ART project guiding the development of an editor to support the authoring of XR experiences.
+
+\section{Research Methodology}
+A preliminary study of the literature allowed to understand the context and its state of the art. Several searches on the academic search engine Google Scholar have been carried out to guide the review proposed in the next chapter and structured as follows:
+\begin{enumerate}
+    \item A first query was related to XR and its role in tourism in the time range 2015-2020:
+        \begin{itemize}
+            \item \texttt{((virtual OR mixed OR augmented OR extended) AND reality) AND (cultural heritage OR tourism)}
+        \end{itemize}
+        After a filtering based on titles and, later on, abstracts, we selected 48 papers to review resulting in 44 useful works that guided our study.
+    \item The second set of queries aimed at searching for conceptual models or modelling techniques in XR or its specifications:
+        \begin{itemize}
+            \item \texttt{(((design  AND methods )  OR  (conceptual  AND  (model  OR  models))) AND (XR  OR  MR))} in the year range 2015-2021.\\
+            22 papers have been selected for further readings, that resulted in 7 relevant articles to examinate.
+            \item \texttt{"conceptual modeling" OR "conceptual model" intitle:AR OR intitle:"augmented reality" OR intitle:"mixed reality"} in the year range 2015-2021.\\
+            Resulting in 4 works selected.
+            \item \texttt{"multimodal interaction techniques" AND " ("VR" OR "AR") "} in the year range 2005-2021.\\
+            10 articles found for closer examination, 2 of them have been taken in consideration for a literature review.
+            \item \texttt{intitle:"modeling 3D Content" OR  intitle:"semantic modeling" AND (VR OR AR OR MR)}\\
+            10 articles have been selected and read, resulting in 4 relevant works accepted.
+            \item Other articles have been considered based on their similarity with the topic or through citations found in the above mentioned works.
+        \end{itemize}
+    \item The last set of queries investigated on advances and works of the last 4 years (2018-2021) in the field of authoring tools and relevant IDEs and APIs, to offer an overview of the current platforms used in the AR/VR development field:
+        \begin{itemize}
+            \item \texttt{intitle:"augmented reality development" OR intitle:"AR development" OR intitle:"AR framework" OR intitle:"AR frameworks" OR intitle:"Augmented Reality framework" OR intitle:"AR tools" OR intitle:"Augmented Reality framework"}\\
+            Starting from 113 results, only 2 papers have been chosen given the relevance with our intended research, filtering them by title, keywords and abstract.
+            \item \texttt{intitle:"virtual reality development" OR intitle:"VR development" OR intitle:"VR framework" OR intitle:"VR frameworks" OR intitle:"Virtual Reality framework" OR intitle:"VR tools" OR intitle:"Virtual Reality framework"}\\
+            Starting from 109 results, only 4 papers have been chosen given the relevance with our intended research, filtering them by title, keywords and abstract.
+            \item \texttt{intitle:"authoring" OR intitle:"SDK OR SDKs" AR augmented VR virtual reality}\\
+            Resulting in 98 results, of which 13 papers have been selected for further reading given their relevance with the research.
+            \item Other articles have been considered based on their similarity with the topic or through citations found in the above mentioned works.
+        \end{itemize}
+\end{enumerate}
 
 \section{Thesis outline}
-Here you explain the structure of the thesis.
+The thesis is structured as follows: \autoref{ch:background} provides an extensive review of the state of the art on XR technologies and their applications in tourism, an overview and comparative study on the existing conceptual models in XR (\autoref{sec:background-conceptual}) and, in conclusion, a thorough analysis on authoring tools in XR (\autoref{sec:background-authoring}).
 
-\begin{example}
-The thesis is structured in the following way:
-\begin{itemize}
-\item In \autoref{ch:conceptual-model}, we present ... .
-\item In \autoref{ch:art}, we formulate the problem we address in the thesis and ... .
-\item Finally, in \autoref{ch:conclusions}, we present our conclusions and possible future paths toward which our work could be extended.
-\end{itemize}
-\end{example}
+The next chapter propose the XRM Conceptual Model and its sub-models: the structural (\autoref{sec:conceptual-structural}), behavioural (\autoref{sec:conceptual-behavioral}) and interaction (\autoref{sec:conceptual-interaction}) models and their application on a concrete use case (\autoref{sec:conceptual-nure-example}). 
+
+Subsequently, \autoref{ch:art} describes the ART Framework and focuses on the implementation of the ART Editor (\autoref{sec:art-editor}) based on a high-level and low-level design process and validated on the same use case found in \autoref{sec:conceptual-nure-example} (\autoref{subsec:art-editor-nure-example}). 
+
+An experimentation phase followed the editor design, resulting in the definition of a usability evaluation study (\autoref{ch:evaluation}) and -- consequently -- the analysis of results (\autoref{sec:evaluation-results}).
+
+Finally, in \autoref{ch:conclusions} the concepts expressed within the thesis are summarized, and the main open challenges in the field are indicated.

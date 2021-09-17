@@ -1,2 +1,170 @@
 \subsection{Low-Level Design}
 \label{subsec:art-editor-lowlevel}
+
+The ART Editor low-level design includes all the choices related to UI, UX and the technological implementation of the application.
+From the specifications described in \autoref{subsec:art-editor-highlevel} we started defining the interaction method, consisting in a \emph{drag-and-drop} pattern used to select the objects to model and place them into the state diagram to achieve a representation as in \autoref{fig:art-fsm-sketch}; this option allows a natural and familiar user experience, already implemented by other popular visual editors like Diagrams.net\footnote{previously known as draw.io} and authoring tools like WAAT \cite{de_paolis_waat_2020}, Meta-AR \cite{villanueva_meta-ar-app_2020}, ComposAR and Wikitude Studio \cite{stephanidis_authoring_2020}.
+
+\subsubsection*{UI/UX Design Choices}
+\label{subsub:art-editor-uiux}
+Some considerations have been made during the design process of the editor, mostly related to the UI to be developed. The first concern was on how to structure a state diagram for XR apps to include and represent more than one object at once when describing their state: indeed, using a \gls{FSM} model where each state is represented by a virtual object would add redundancy of actions and entry states or add inconsistencies of representations (e.g. the same input makes the \gls{FSM} go into two or more different states). For these reasons we decided to represent both states and user actions with nodes of the diagram describing states and inputs of the \gls{XR} finite-state machine; these nodes act as containers of elements -- dragged and dropped into them -- where their behaviour and their properties are delineated. Thus, one or more virtual objects can be a member of state (\autoref{fig:stateNode}) and action nodes (\autoref{fig:actionNode}), with links among them acting as links between states in a standard state diagram.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/stateNode.png}
+    \caption{Low Level Design - State Node}
+    \label{fig:stateNode}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/actionNode.png}
+    \caption{Low Level Design - Action Node}
+    \label{fig:actionNode}
+\end{figure}
+
+Another important aspect to consider was the definition of user actions on elements and their effects as changes of structural properties. Basing our decisions on the drag-and-drop interaction pattern and the clustering of states and actions (\autoref{subsec:art-editor-highlevel}) we introduced two complementary elements able to describe elements' states and actions inside their nodes: \emph{state} and \emph{action tags}. These components (\autoref{fig:tags}) designate atomic properties or interactions to be dragged and dropped to compose states and actions (\autoref{fig:sasTags}); in this way it is possible to design XR applications modelling only the required elements and their properties, allowing an easy and understandable state diagram (\autoref{fig:sasLink}) of the entire app life-cycle.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/tags.png}
+    \caption{Low Level Design - Tags}
+    \label{fig:tags}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/SaSTags.png}
+    \caption{Low Level Design - State and Action Tags}
+    \label{fig:sasTags}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/SaSlinks.png}
+    \caption{Low Level Design - State and Action Link}
+    \label{fig:sasLink}
+\end{figure}
+
+After state tags have been attached to an element it is possible to define the structural properties of these (\autoref{tab:state-tag-properties}), belonging to the Non-Human Actors' Structural Model properties (\autoref{sec:conceptual-structural}) or interaction properties (\autoref{tab:action-tag-properties}) for specific actions.
+
+\begin{table}[h]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{State}           & \textbf{Property}         & \textbf{Description}                                                                               \\ \hline
+\multirow{4}{*}{Visible} & opacity =  {[}0-100{]}\%  & The opacity of the visible element                                                                 \\ \cline{2-3} 
+                             & animate = \{true | false\}   & \begin{tabular}[c]{@{}l@{}}Choose whether the element should \\ become visible fading in or not\end{tabular} \\ \cline{2-3} 
+                         & duration {[}s{]}          & \begin{tabular}[c]{@{}l@{}}Duration of the fade in animation \\ (in seconds)\end{tabular}          \\ \cline{2-3} 
+                         & wait {[}s{]}              & \begin{tabular}[c]{@{}l@{}}Waiting time before starting the animation \\ (in seconds)\end{tabular} \\ \hline
+\multirow{3}{*}{Hidden}      & animate = \{true | false\}   & \begin{tabular}[c]{@{}l@{}}Choose whether the element should \\ become hidden fading out or not\end{tabular} \\ \cline{2-3} 
+                         & duration {[}s{]}          & \begin{tabular}[c]{@{}l@{}}Duration of the fade out animation \\ (in seconds)\end{tabular}         \\ \cline{2-3} 
+                         & wait {[}s{]}              & \begin{tabular}[c]{@{}l@{}}Waiting time before starting the animation \\ (in seconds)\end{tabular} \\ \hline
+Selected                     & highlight = \{true | false\} & \begin{tabular}[c]{@{}l@{}}Highlight the selected element with \\ luminous borders\end{tabular}              \\ \hline
+\multirow{3}{*}{Manipulated} & rotation = \{true | false\}  & \begin{tabular}[c]{@{}l@{}}Choose whether to allow the element \\ to be rotated or not\end{tabular}          \\ \cline{2-3} 
+                         & move = \{true | false\}   & \begin{tabular}[c]{@{}l@{}}Choose whether to allow the element \\ to be moved or not\end{tabular}  \\ \cline{2-3} 
+                         & scale = \{true | false\}  & \begin{tabular}[c]{@{}l@{}}Choose whether to allow the element \\ to be scaled or not\end{tabular} \\ \hline
+Blinking                 & loop = \{true | false\}   & \begin{tabular}[c]{@{}l@{}}Choose whether to blink the element \\ in loop or not\end{tabular}      \\ \hline
+On Play                  & loop = \{true | false\}   & \begin{tabular}[c]{@{}l@{}}Choose whether to restart the playback \\ at end or not\end{tabular}    \\ \hline
+Audio                    & sound = \{on | off\}      & Control the sound of multimedia elements                                                           \\ \hline
+Subtitles                & visibility = \{on | off\} & Control the subtitles of multimedia elements                                                       \\ \hline
+\end{tabular}%
+}
+\caption{Structural properties of state tags}
+\label{tab:state-tag-properties}
+\end{table}
+
+\begin{table}[h]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Action} & \textbf{Property} & \textbf{Description}                             \\ \hline
+Proximity In  & duration {[}s{]} & \begin{tabular}[c]{@{}l@{}}The amount of elapsed time into an element's\\ proximity area\end{tabular}         \\ \hline
+Proximity Out & duration {[}s{]} & \begin{tabular}[c]{@{}l@{}}The amount of elapsed time out from an element's\\ proximity area\end{tabular}     \\ \hline
+Gaze In         & duration {[}s{]}  & The amount of time the user looks at the element \\ \hline
+Gaze Out      & duration {[}s{]} & \begin{tabular}[c]{@{}l@{}}The amount of time after the user avert their gaze\\ from the element\end{tabular} \\ \hline
+\end{tabular}%
+}
+\caption{Properties of action tags}
+\label{tab:action-tag-properties}
+\end{table}
+
+In conclusion, the last step consisted in drawing the wireframes describing the \gls{GUI} of ART Editor (\autoref{fig:canva1}, \autoref{fig:canva2}), including a left pane with the available elements to choose for modelling the experience, a main paned window containing the modelled \gls{FSM} diagram and a horizontal tab bar on top, displaying the name of the opened project and other functional buttons.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/canva1.png}
+    \caption{Low Level Design - Editor land page}
+    \label{fig:canva1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Editor/wireframes/canva2.png}
+    \caption{Low Level Design - Editor Options}
+    \label{fig:canva2}
+\end{figure}
+
+\subsubsection*{Technological Choices}
+\label{subsub:art-editor-technological}
+From the requirements and decisions made during the low-level and high-level design phases we chose to implement the diagram modelling feature using the GoJS\footnote{\url{https://gojs.net/}} web framework. GoJS is a JavaScript library that allows to build interactive diagrams and applications to model entities with custom rules and designs.
+
+Adapting GoJS into a new project is a simple task and it only requires to include its .~js library file into the HTML page as a script tag source, while the whole implementation of the diagram is delegated to JavaScript functions executed after the web page has loaded.
+
+Finally, our focus has shifted on the last authoring step that allows the ART Editor to export the modelled experience to open in with the \gls{HMD} on-site authoring application. Being the editor and its data model developed in JavaScript and given the compatibility and modifiability constraints of the configuration file to be exported, our choice has been to save the diagram using \gls{JSON} as data interchange technology and file format. This choice allows an easy transformation of GoJS data, i.e. the modelled experience, into a specific application readable schema (\autoref{main-json-schema}) allowing an easy integration and portability for both the applications.
+
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, captionpos=b, basicstyle=\ttfamily, 
+emph={ARTRecipeID,Name,Description,ListOfObjects,type,id,ListOfStates,InitState,EndState,Objects,decorations,options,ListOfTransitions,Inputs,NextState}, emphstyle=\textbf}
+\begin{lstlisting}[firstnumber=1, caption={ART Editor JSON Schema}, label=main-json-schema]
+{
+  "ARTRecipeID": <uuid>
+  "Name": <string>
+  "Description": <string>
+  "ListOfObjects": [
+    {
+      "type": <string>
+      "id": <integer>
+    }
+  ],
+  "ListOfStates": [
+    {
+      "Name": <string>
+      "InitState": <boolean>
+      "EndState": <boolean>
+      "Objects": [
+        {
+          "type": <string>
+          "id": <integer>
+          "decorations": [
+            {
+              "type": <string>
+              "options": {}
+            }
+          ]
+        },
+      ],
+      "ListOfTransitions": [
+        {
+          "Name":  <string>
+          "Inputs": [
+            {
+              "type": <string>
+              "id": <integer>
+              "decorations": [
+                {
+                  "type": <string>
+                  "options": {}
+                }
+              ]
+            }
+          ],
+          "NextState": <string>
+        }
+      ]
+    },
+  ]
+}
+\end{lstlisting}
+
+As it is possible to notice from the \gls{JSON} schema in \autoref{main-json-schema} it represents a detailed view of the modelled diagram, of which three main lists constitute the core of the diagram: the \lstinline!ListOfObjects! is the list of each element participating in the scene and identified by their unique identifier, \lstinline!ListOfStates! describes each state node with a unique identifier (Name), two booleans to indicate whether it is an initial state, a final state or neither and the list of objects present in the state. The latter lists objects in a state by their id and type (3d\_scene, 3d\_model, 3d\_video, 2d\_video, 2d\_image, 2d\_text, 360\_video, menu, qr\_code, device), while the \lstinline!decorations! attribute contains a collection of state tags with their related options. In conclusion, the \lstinline!ListOfTransitions! attribute of each state designates action nodes with a unique identifier (Name), a list of objects containing the object identifiers, their action tags and related properties (decorations), and lastly a \lstinline!NextState! attribute referencing the final state of that specific action.
+
+To give a further explanation of the JSON model we provide an example in the Appendix section (\autoref{json-schema-example}), describing a 2D Video visible and in pause that, when a tap action occurs, it plays its content in loop.

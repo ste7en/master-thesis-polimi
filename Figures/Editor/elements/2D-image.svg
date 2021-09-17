@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>2D Image</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-32.000000, -72.000000)" stroke="#000000" stroke-width="0.3">
+            <g id="2D-Image" transform="translate(32.000000, 72.000000)">
+                <path d="M1.23157895,14 L4.13994624,10.4028948 C4.31356557,10.1881602 4.62838862,10.1548297 4.8431232,10.328449 C4.8477338,10.3321769 4.85227773,10.3359864 4.85675283,10.3398758 L6.69254925,11.9354167 C6.90097299,12.1165635 7.2167823,12.0944511 7.39792907,11.8860274 C7.40770175,11.8747831 7.41696701,11.8631077 7.42569712,11.8510362 L10.6182636,7.4365006 C10.7800852,7.21274099 11.0926606,7.16253035 11.3164202,7.324352 C11.3264769,7.33162491 11.3362593,7.33926974 11.345747,7.3472706 L16.8631579,12" id="Path-2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <ellipse id="Oval" cx="6.69684211" cy="6.06888889" rx="1.01263158" ry="1.06888889"></ellipse>
+                <rect id="Rectangle" x="0.15" y="0.15" width="17.7" height="15.7" rx="0.8"></rect>
+                <rect id="Rectangle" x="1.09736842" y="1.15" width="15.8052632" height="13.7" rx="0.8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

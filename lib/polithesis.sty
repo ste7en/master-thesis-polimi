@@ -44,7 +44,7 @@
 \usepackage{caption, subcaption}
 \usepackage{float}
 \graphicspath{{Figures/}}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[dvipsnames, table, xcdraw]{xcolor}
 
 \usepackage[pdfusetitle]{hyperref}
 \hypersetup{colorlinks=true,
@@ -211,7 +211,7 @@
 %                           ALGORITHMS                           
 %*****************************************************************
 
-\usepackage{algorithm}
+\usepackage[chapter]{algorithm}
 \usepackage[noend]{algpseudocode}
 \newcommand{\algorithmautorefname}{Algorithm}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
@@ -322,29 +322,25 @@ Master of Science in\\
 
 
 
-\begin{minipage}[t]{0.5\textwidth}
-    \ifcsname printSupervisor\endcsname
-    \noindent Supervisor:\\
-        \textsc{\printSupervisor}
-    \fi
-    
-    \ifcsname printCoSupervisors\endcsname
-        \ifnum\value{CoSupervisors}>0
-            \vspace{6px} \noindent Co-Supervisor%
-            % add final 's' if more than one Co-Supervisor
-            \ifnum\value{CoSupervisors}>1s\fi:\\
-            \textsc{\printCoSupervisors}
-        \fi
-    \fi
-\end{minipage}
-\begin{minipage}[t]{0.5\textwidth}
-    \ifcsname printAuthor\endcsname
-    \flushright
-        MSc Thesis Authors:\\[0.1cm]
-	    \printAuthor
-    \fi
-\end{minipage}
+\ifcsname printSupervisor\endcsname
+\noindent Supervisor:\\
+    \textsc{\printSupervisor}
+\fi
 
+\ifcsname printCoSupervisors\endcsname
+  \ifnum\value{CoSupervisors}>0
+    \vspace{6px} \noindent Co-Supervisor%
+    % add final 's' if more than one Co-Supervisor
+    \ifnum\value{CoSupervisors}>1s\fi:\\
+    \textsc{\printCoSupervisors}
+  \fi
+\fi
+
+\ifcsname printAuthor\endcsname
+\flushright
+MSc Thesis Authors:\\[0.1cm]
+	\printAuthor
+\fi
 
 
 

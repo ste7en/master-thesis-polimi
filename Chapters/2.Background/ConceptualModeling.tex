@@ -1,36 +1,65 @@
 \section{Conceptual Modeling in XR}
 \label{sec:background-conceptual}
 
-Bille et al.~\cite{bille_conceptual_2007} define conceptual modeling as \textit{the activity of building a model of the Universe of Discourse (UoD) in terms of concepts that are familiar to domain experts and free from any implementation details}. The Universe of Discourse is the slice of the world we want to explore. 
-A proper conceptual model aids understanding of the tasks that constitute the system \cite{norman_design_2013}. There is a difference between the model of the system as perceived by the user and the system itself, and the more they deviate from each other the less they can be considered acceptable models \cite{rosson_usability_2002}. The expectations of the designer of a model do not always correspond to those of the user, whose models are shaped by diagrams and analyses in the first case and by experiences and interactions in the second \cite{laviola_jr_3d_2017}. 
+Bille et al.~\cite{bille_conceptual_2007} define \emph{Conceptual Modeling} as \textit{the activity of building a model of the Universe of Discourse (UoD) in terms of concepts that are familiar to domain experts and free from any implementation details}. The Universe of Discourse is the slice of the world we want to explore. 
+A proper conceptual model aids the understanding of the tasks that constitute the system \cite{norman_design_2013}. Moreover, there is a difference between the model of the system as perceived by the user and the system itself, and the more they deviate from each other the less they can be considered acceptable models \cite{rosson_usability_2002}. The expectations of the designer of a model do not always correspond to those of the user. The former creates models shaped by diagrams and analyses, while the latter creates models shaped through experiences and interactions \cite{laviola_jr_3d_2017}. 
 
 Other pros, besides the intuitiveness of the concepts and the clarity of the information for those who have to use it, are addressed in \cite{bille_conceptual_2007}. They include the possibility of isolating parts of the domain, supporting dialogue between the figures involved and, finally, providing a high-level, rapid and convenient debugging. 
 The need to build conceptual models is rooted in the context of database systems, whose increasing complexity has led experts and non-experts to consider and model all information and requirements, useful for implementation, even before acting on the physical components \cite{connolly_database_2005}.
 
-Conceptual modeling has become increasingly popular in the field of engineering design, which is the reason why it is discussed in this thesis in relation to the latest technologies. 
-The arguments researched in the literature that led the authors to develop conceptual models in VR and AR are numerous, basically deriving from the abstraction of the application to be developed from the implementation layer \cite{de_troyer_conceptual_2007}. Before being committed to the exclusive domain of experts, development should cover the low level design of the systems components to be implemented. The translation of concepts from the real world to the virtual/augmented world is challenging and time-consuming if these are not modeled. By introducing high-level models, complexity is reduced since they can be interpreted at run time, allowing easy modifications and thus amortizing costs \cite{coninx_vr-demo_2006}. 
+Conceptual modelling has become increasingly popular in the field of design engineering, which is the reason why it is discussed in this thesis in relation to the latest technologies. 
+The arguments researched in the literature that led the authors to develop conceptual models in VR and AR are numerous, basically deriving from the abstraction of the application to be developed from the implementation layer \cite{de_troyer_conceptual_2007}. The development of XR, VR and AR applications should address the design of the components of an experience, before proceeding to the implementation phase. This step, indeed, requires a background knowledge of the technologies that belongs only to the most experienced programmers and not always to the experience designers. 
+The translation of real-world concepts, which we want to translate into the virtual/augmented world being built, is challenging and time consuming if these concepts are not modelled at a high level. By introducing a level of design that precedes the writing of the code, complexity is reduced, interventions are more immediate, resources and time are optimised, communication is better within the team because non-experts are also involved \cite{coninx_vr-demo_2006}. 
 Moreover, behind the development of an application there are professionals who contribute to the creation of the contents and the introduction of conceptual models allows even those who do not have a technical background, related to programming or 3D design, to understand the logic of the application \cite{walczak_structured_2008}. 
 In addition, many authors address the problem of solution re-usability, which becomes difficult when applications follow domain- or hardware-specific models, guidelines and tools \cite{figueroa_conceptual_2006}. 
 
 \subsection{Conceptual Models}
 
-Numerous studies in the literature present conceptual models in AR and VR environments. A brief overview of the works analysed is given, reported according to the technology that characterises them and the features they are composed of.
-Recurring terminology in this section includes concepts like high-level modelling, i.e. modelling that abstracts from application development and whose understanding does not require a technical background. Next we will discuss interaction techniques, defined as a \textit{way of using a physical input/output device to perform a generic task in a human-computer dialogue} \cite{foley_computer_1990} that in this context are applied to the technology involved. Multimodal interactions, on the other hand, include ways of relating to and communicating with not only physical but also Virtual Environments (VEs) \cite{bourguet_designing_2003}. 
+Numerous studies in the literature present conceptual models in AR and VR environments. A brief overview of the works analysed is given, reported according to the technology used (VR, AR, MR) since they have different features and interaction paradigm.
+Recurring terminology in this section includes concepts like 'high-level modelling', i.e. modelling that abstracts from application development and whose understanding does not require a technical background. Next we will discuss 'interaction techniques', defined as a \textit{way of using a physical input/output device to perform a generic task in a human-computer dialogue} \cite{foley_computer_1990} that in this context are applied to the technology involved. 'Multimodal interactions', on the other hand, include ways of relating to and communicating with not only physical but also Virtual Environments (VEs) \cite{bourguet_designing_2003}. 
 
 % VR
-The last two decades have seen the rise of high-level design of VR applications. Latta et al.~\cite{latta_conceptual_1994} proposes a VR system with two perspectives: a human-centred view that characterises participants and their muscular and perceptual systems, and a technical view that defines both the real and simulated participatory environment within which humans interact. The stimuli generated by the environment trigger sensations to which humans respond through actions that are recognised by the sensors of the environment itself. A confection model is used to relate participants to the real environment, and its components handle the interface control functions. 
+The last two decades have seen the rise of frameworks for VR applications. Latta et al.~\cite{latta_conceptual_1994} proposes a VR system with two perspectives: a human-centred view that characterises participants and their muscular and perceptual systems, and a technical view that defines both the real and simulated participatory environment within which humans interact. The stimuli generated by the environment trigger sensations to which humans respond through actions that are recognised by the sensors of the environment itself. A confection model (\autoref{fig:latta}) is used to relate participants to the real environment, and its components handle the interface control functions. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Background/models/latta.png}
+    \caption{Conceptual Models - VR System}
+    \label{fig:latta}
+\end{figure}
 
 More recent research describes the interaction techniques required to perform tasks involving the use of 3D interfaces performed by users. In this regard, the book of LaViola Jr et al.~\cite{laviola_jr_3d_2017} explains the 3D interaction techniques applicable to different devices by organizing human tasks in selection and manipulation, travel intended as navigation, wayfinding, ending with tasks related to system state change and symbolic input. No code or pseudocode translation is attached to the extensive description, thus the interpretation and development choices are up to the implementer. 
 
-Facilitating the developer's workload is one of the main arguments addressed in \cite{coninx_vr-demo_2006}, which introduces \textit{VR-Demo}, an approach that allows to design high-level virtual environment applications with a supporting tool. The logical structure separates the modelling of the VE and the behaviour of its components from user interactions. A later partner project of the latter approach can be found in \cite{de_troyer_conceptual_2007, bille_conceptual_2007} where more emphasis is given to the conceptual modelling part embedded in a semantic framework. The introduction of a conceptual design step into the development process allows to achieve a level of abstraction that would enable non-experts to build VR applications. The proposed method, VR-WISE, contemplates a three-phase development cycle, one more than VR-DEMO. The first phase consists of conceptual specification at two levels: one of the domain and behaviour and one of the actual virtual world. The second stage is the mapping of the domain and world and the last is the generation of the code. Despite the detailed modelling of concepts and behaviours, the work lacked the modelling of interactions, that is addressed in VR-DEMO. To support the interactions Berge et al.~\cite{berge_towards_2014} use a collection of links to connect the sub-tasks the user has to perform with the elements of the 3D VE involved in the task to be accomplished. The resulting analytical framework consists of two tree structures, one decomposing the user tasks into sub-tasks and an interactive scene graph showing the hierarchy of 3D objects, lights and virtual cameras. 
+Facilitating the developer's workload is one of the main arguments addressed in \cite{coninx_vr-demo_2006}, which introduces \textit{VR-Demo}, an approach that allows to design high-level \gls{VE} applications with a supporting tool. The logical structure separates the modelling of the VE and the behaviour of its components from user interactions. De Troyer et al~\cite{de_troyer_conceptual_2007} introduce a conceptual design step into the development process, allowing to achieve a level of abstraction that would enable non-experts to build VR applications. The proposed method, VR-WISE (\autoref{fig:detroyer}), contemplates a three-phase development cycle, one more than VR-DEMO. The first phase consists of \textit{conceptual specification of the domain and behaviour and the actual virtual world}. The second stage is the \textit{mapping of the domain and world} and the last is the \textit{generation} of the code. Despite the detailed modelling of concepts and behaviours, the work lacked the modelling of interactions, that is addressed in VR-DEMO. To support the interactions Berge et al.~\cite{berge_towards_2014} use a collection of links to connect the sub-tasks the user has to perform with the elements of the 3D VE involved in the task to be accomplished (\autoref{fig:berge}). The resulting analytical framework consists of two tree structures, one decomposing the user tasks into sub-tasks and an interactive scene graph showing the hierarchy of 3D objects, lights and virtual cameras. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Background/models/detroyer.png}
+    \caption{Conceptual Models - VR-WISE}
+    \label{fig:detroyer}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Background/models/bergè.png}
+    \caption{Conceptual Models - Analytical Framework}
+    \label{fig:berge}
+\end{figure}
 
 % AR
-As far as AR modelling is concerned, the work of Pendit et al.~\cite{chandini_pendit_conceptual_2015} is devoted to cultural heritage projects and seeks to involve the visitor in the activities, to give them positive feelings, to satisfy their needs so that the overall experience is enjoyable. 
+As far as AR modelling is concerned, the work of Pendit et al.~\cite{chandini_pendit_conceptual_2015} is devoted to cultural heritage projects and seeks to involve the visitor in the activities, to give them positive feelings, to satisfy their needs so that the overall experience is enjoyable. The proposed conceptual model (\autoref{fig:chandini}) identifies 3 structures containing a large number of elements. The first structure includes the hardware components and the process phases of development, the second includes a set of functions that guide the visitor through the Cultural Heritage site, and the third includes the components that make learning enjoyable such as activities, interaction, personalisation and games. The intersection between the structures is a set of elements such as 3D Model, 3D Character, Text, Image and so on.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{Figures/Background/models/ChandiniP.png}
+    \caption{Conceptual Models - MARCHSTEIL}
+    \label{fig:chandini}
+\end{figure}
 
 % AR + VR
-Many efforts have been dedicated to include both VR and AR technologies. The approach presented in \cite{geiger_structured_2001} includes a design methodology for 3D environments that requires to be based on the metaphor of the actors whose actions correspond to a change in their attributes. It includes a 3D content library where the components of the environment are defined at a high level, is also extendable to third parties and independent of the operating system. The consequence of using a specific semantics such as actor roles does not allow the application of domain knowledge and forces the use of the framework provided by them.
+Many efforts have been dedicated to include both VR and AR technologies. The approach presented in \cite{geiger_structured_2001} includes a design methodology for 3D environments that requires to be based on the metaphor of the actors whose actions correspond to a change in their attributes. It includes a 3D content library where the components of the environment are defined at a high level, is also extendable with third parties and independent of the operating system. The consequence of using a specific semantics such as actor roles does not allow the application of domain knowledge and forces the use of the framework provided by them.
 
-Flotynski et al.~\cite{flotynski_conceptual_2015, flotynski_ontology-based_2017} also address semantic creation and modelling of 3D content in several studies. The SEMIC approach is presented as the combination of two elements: the SMC \cite{flotynski_semantic_2014, flotynski_semantic_2013, van_der_aalst_conceptual_2013}, on the one hand, modelled as a collection of ontologies, distinguishes concrete aspects such as geometry, space, structure, appearance, animation, behaviour and provides a representation of content at different levels of abstraction. The SCCM model \cite{mohler_semantic_2013}, on the other hand, translates the concepts of the SMC into their final representation through several steps, some of which are user-driven and others are performed automatically.
+Flotynski et al.~\cite{flotynski_conceptual_2015, flotynski_ontology-based_2017} also address semantic creation and modelling of 3D content in several studies. The SEMIC approach is presented as the combination of two elements: the SMC \cite{flotynski_semantic_2014, flotynski_semantic_2013, van_der_aalst_conceptual_2013}, on one hand, modelled as a collection of ontologies, which distinguishes concrete aspects such as geometry, space, structure, appearance, animation, behaviour and provides a representation of content at different levels of abstraction. The SCCM model \cite{mohler_semantic_2013}, on the other, translates the concepts of the SMC into their final representation through several steps, some of which are user-driven and others are performed automatically.
 
 % XR & MR
 The literature dealing with the modelling of mixed experiences is quite modest, yet of high relevance. They represent an important challenge for designers and developers, who need a tool able to define interaction techniques valid for multiple types of input devices. Gomes et al.~\cite{gomes_extended_2020} developed a toolkit to support the creation of applications and interaction techniques in VR, AR and MR. It also contains a set of literature-based resources including completely reviewed design methods, guidelines and frameworks, accessible via a web interface and useful to the user for the XR application development process. The design process consists of six phases and is executed iteratively, also covering a selection of several XR frameworks, a library of interaction techniques and a phase-by-phase analysis of potential pitfalls and issues that may be encountered during the course of the process.
@@ -40,19 +69,40 @@ Some of the works reviewed have also developed scripting languages and descripti
 
 Figueroa et al.~\cite{figueroa_conceptual_2006} provide formal specifications for the 3D interface components of MR experiences with respect to the device used, the modalities, the application type, the target group, the relationships between components and their behaviour. Furthermore, in parallel to the formal description of 3D Interaction Components, the authors propose the ICDL, a support tool, also based on XML. The work, though, does not delve into the aspects related to user tasks and skills.
 
-Chevallier et al.~\cite{chevaillier_semantic_2012} implement another framework based on a standard notation, precisely the UML metamodel, with several additional extensions in order to apply it to the VR domain. The choice of using an already well-known modelling language is due to the clear mechanism and the possibility to provide the necessary abstraction for both content and system oriented semantic modelling. In \cite{costabile_formal_2005} the discussed advantage of formal descriptions compared to informal ones, that can bring unwanted unforeseen events, has resulted in the definition of a formalism called ICO to support multimodal interaction techniques. Encapsulating concepts from object-oriented programming (OOP), an object is an entity through which the behaviour of an ICO can be modelled, its appearance and interactions with users can be described.
+Chevallier et al.~\cite{chevaillier_semantic_2012} implement another framework (\autoref{fig:chevaillier}) based on a standard notation, precisely the UML metamodel, with several additional extensions in order to apply it to the VR domain. The choice of using an already well-known modelling language is due to the clear mechanism and the possibility to provide the necessary abstraction for both content and system oriented semantic modelling. In \cite{costabile_formal_2005} the discussed advantage of formal descriptions compared to informal ones, that can bring unwanted unforeseen events, has resulted in the definition of a formalism called ICO to support multimodal interaction techniques. Encapsulating concepts from object-oriented programming (OOP), an object is an entity through which the behaviour of an ICO can be modelled, its appearance and interactions with users can be described.
 
-Multimodal interaction techniques are the subject of the event state-driven graphical notation presented by Vanacken et al.~\cite{grapp06}. The primitives that constitute it are the states and events, the task chain that must be executed, the data that these carry through states, the transition and conditional states, the hierarchical usage and the input/output parameters.  Even in this case, a framework based on the XML schema is attached to encapsulate the primitives and execute the interactions.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{Figures/Background/models/chevallier.png}
+    \caption{Conceptual Models - MASCARET}
+    \label{fig:chevaillier}
+\end{figure}
 
-These models, based on standard languages belonging to the software engineering domain, are limited when applying knowledge-based models as they have to be rendered at run-time.
+Multimodal interaction techniques are the subject of the event state-driven graphical notation (\autoref{fig:vanacken}) presented by Vanacken et al.~\cite{vanacken2006nimmit}. The primitives that constitute it are states and events, the task chain that must be executed, the data that these carry through states, the transition and conditional states, the hierarchical usage and the input/output parameters.  Even in this case, a framework based on the XML schema is attached to encapsulate the primitives and execute the interactions.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Background/models/vanacken1.png}
+    \caption{Conceptual Models - NiMMiT}
+    \label{fig:vanacken}
+\end{figure}
+
+Although it does not include any of the technologies relevant to this thesis, we believe it is crucial to mention the work carried out by Gianotti et al~\cite{dobbie_modeling_2020}. The conceptual model is applied to ISS, systems consisting of smart resources based on IoT devices, physical objects and software services that support human interactions. It comprises two sub-models (\autoref{fig:gianotti}), one used to describe the structural features and the other, instead, to define the behaviours and interactions between the actors that participate in the experience created for the ISS. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Background/models/gianotti.png}
+    \caption{Conceptual Models - ISS Model}
+    \label{fig:gianotti}
+\end{figure}
 
 \subsection{Comparative study}
 
-After reviewing the numerous articles relating to the study that is the subject of this thesis, it was decided to narrow down the overview of conceptual models by selecting three works found in the literature.
+After reviewing the numerous articles related to the study that is the subject of this thesis, it was decided to narrow down the overview of conceptual models by selecting three works found in the literature.
 
 The resulting analysis was relevant to underline the features, to understand the strengths and weaknesses of each of them so as to guide the proposal of this thesis. The tables below summarizes their main characteristics. 
 
-\begin{table}
+\begin{table}[h]
 \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3cm}|} 
 \hline % The line on top of the table
 \textbf{Approach} 
@@ -80,7 +130,7 @@ The most popular general purpose conceptual modelling languages such as ER \cite
 As to Gianotti et al.~\cite{dobbie_modeling_2020}, it bypasses the use of a standard language and addresses the lack of attention to human-related aspects in the existing models (within ISS) by proposing a solution centered on perceived interaction at different levels of abstraction. In this regard, therefore, the aim is to provide a set of tools that can be understood and enjoyed by the user, the main protagonist of the experience. 
 
 \begin{table}
-\begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3cm}|} 
+\begin{tabular}{|p{2.75cm}|p{3cm}|p{3cm}|p{3cm}|} 
 \hline % The line on top of the table
 \textbf{Environment}
 & \textbf{VR-WISE} 
@@ -113,8 +163,10 @@ Other
 \end{table}
 
 The second criterion, crucial in conceiving this thesis, highlights the \textit{Environments} for which the models are designed (\autoref{table:Environment}). The most widely used technology is certainly VR since the number of applications is greater compared to AR, and the samples examined for our comparative analysis also demonstrate this. 
-In the last two decades a large number of authoring platforms and programming libraries have been deployed to support application developers in VR. Some examples of conceptual modelling specific to the AR domain exist in the literature but are limited because they are too tied to a single technology and therefore not so versatile. A separate mention must be made of the ISS Model, dedicated to Smart Spaces as a place for interactive user experiences. Despite the environment is quite different, in terms of the technologies used (IoT systems), as regards the other two models analysed, the model-based approach will clarify its fundamental presence in this study. 
-Finally, the lack of works in the XR field hints at some of the main reasons for this thesis project, i.e., the need to design cross-reality experiences with the same language.
+In the last two decades a large number of authoring platforms and programming libraries have been deployed to support application developers in VR. 
+
+Some examples of conceptual modeling specific to the AR domain exist in the literature but are limited because they are too tied to a single technology and therefore not so versatile. A separate mention must be made of the ISS Model, dedicated to Smart Spaces as a place for interactive user experiences. Although the environment is quite different from the other two models analysed -- in terms of the technologies used (IoT systems) -- the proposed conceptual model will clarify its fundamental presence in this comparative study. 
+Finally, the lack of works covering the whole XR spectrum hints at some of the main reasons for this thesis project, i.e., the need to design cross-reality experiences with the same language.
 
 \begin{table}
 \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3cm}|} 

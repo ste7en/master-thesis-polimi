@@ -1,6 +1,16 @@
 \section{ART Editor}
 \label{sec:art-editor}
 
+The ART Editor is ART Framework's module involved in the interaction authoring phase. As already explained in \autoref{subsec:art-editor-from-conceptual} it is based on the XRM (\autoref{ch:conceptual-model}) and it allows to design the model of XR experiences.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \linewidth]{Figures/Editor/main-UI.png}
+    \caption{ART Editor UI}
+    \label{fig:editor-main-ui}
+\end{figure}
+
+Before precede in the next sections about the Editor it should be noted that this application is at an intermediate phase between the uploading of contents and their on-site authoring. The left side section of the (\autoref{fig:editor-main-ui}) shows a list of elements which ideally corresponds to the actual assets to be used, replaced for now by placeholders to give an overview of how they are positioned in the UI. For this reason the assets whose interaction can be modelled are, theoretically, the same uploaded on the CMS platform when a new project is created, but for testing purposes in our examples they have been replaced with elements representing their own categories (e.g. \emph{3D Model}, \emph{2D Video}, ...), given the impossibility to reproduce a working integrated CMS at the time of development.
+
 \input{Chapters/4.ART/Editor/FromConceptual}
 \input{Chapters/4.ART/Editor/HighLevel}
 \input{Chapters/4.ART/Editor/LowLevel}

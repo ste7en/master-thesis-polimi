@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>QR code@3x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-206.000000, -71.000000)">
+            <g id="QR-code" transform="translate(206.000000, 71.000000)">
+                <path d="M10.8823529,1 L10.8823529,5.11764706 L15,5.11764706 L15,1 L10.8823529,1 Z M14.1764706,4.29411765 L11.7058824,4.29411765 L11.7058824,1.82352941 L14.1764706,1.82352941 L14.1764706,4.29411765 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="12.5294118 2.64705882 13.3529412 2.64705882 13.3529412 3.47058824 12.5294118 3.47058824"></polygon>
+                <path d="M10.8823529,15 L15,15 L15,10.8823529 L10.8823529,10.8823529 L10.8823529,15 Z M11.7058824,11.7058824 L14.1764706,11.7058824 L14.1764706,14.1764706 L11.7058824,14.1764706 L11.7058824,11.7058824 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="12.5294118 12.5294118 13.3529412 12.5294118 13.3529412 13.3529412 12.5294118 13.3529412"></polygon>
+                <path d="M1,15 L5.11764706,15 L5.11764706,10.8823529 L1,10.8823529 L1,15 Z M1.82352941,11.7058824 L4.29411765,11.7058824 L4.29411765,14.1764706 L1.82352941,14.1764706 L1.82352941,11.7058824 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="2.64705882 12.5294118 3.47058824 12.5294118 3.47058824 13.3529412 2.64705882 13.3529412"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="5.94117647 14.1764706 8 14.1764706 8 15 5.94117647 15"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="5.94117647 12.5294118 7.17647059 12.5294118 7.17647059 13.3529412 5.94117647 13.3529412"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="3.47058824 9.23529412 4.29411765 9.23529412 4.29411765 10.0588235 3.47058824 10.0588235"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="2.64705882 9.23529412 1.82352941 9.23529412 1.82352941 7.58823529 1 7.58823529 1 10.0588235 2.64705882 10.0588235"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="14.1764706 9.23529412 13.3529412 9.23529412 13.3529412 10.0588235 15 10.0588235 15 7.58823529 14.1764706 7.58823529"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="10.8823529 9.23529412 12.5294118 9.23529412 12.5294118 10.0588235 10.8823529 10.0588235"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="8 9.23529412 10.0588235 9.23529412 10.0588235 10.0588235 8 10.0588235"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="8.82352941 14.1764706 10.0588235 14.1764706 10.0588235 15 8.82352941 15"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="9.23529412 12.5294118 8 12.5294118 8 13.3529412 10.0588235 13.3529412 10.0588235 10.8823529 9.23529412 10.8823529"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="5.94117647 11.7058824 8 11.7058824 8 10.8823529 6.76470588 10.8823529 6.76470588 9.23529412 5.11767451 9.23529412 5.11767451 10.0588235 5.94117647 10.0588235"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="8.82352941 2.64705882 10.0588235 2.64705882 10.0588235 3.47058824 8.82352941 3.47058824"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="10.8823529 5.94117647 11.7058824 5.94117647 11.7058824 6.76470588 10.8823529 6.76470588"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="10.8823529 7.58823529 11.7058824 7.58823529 11.7058824 8.41176471 10.8823529 8.41176471"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="12.5294118 8.41176471 13.3529412 8.41176471 13.3529412 6.76470588 15 6.76470588 15 5.94117647 12.5294118 5.94117647"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="8 5.11764706 9.23529412 5.11764706 9.23529412 8.41176471 10.0588235 8.41176471 10.0588235 4.29411765 8 4.29411765"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="4.29411765 8.41176471 8 8.41176471 8 7.58823529 5.11764706 7.58823529 5.11764706 6.76470588 4.29411765 6.76470588"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="2.64705882 8.41176471 3.47058824 8.41176471 3.47058824 5.94117647 1 5.94117647 1 6.76470588 2.64705882 6.76470588"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="4.29411765 4.29411765 5.11764706 4.29411765 5.11764706 5.94117647 4.29411765 5.94117647"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="5.94117647 5.94117647 8 5.94117647 8 6.76470588 5.94117647 6.76470588"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="6.76470588 3.47058824 8 3.47058824 8 2.64705882 5.94117647 2.64705882 5.94117647 5.11764706 6.76470588 5.11764706"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="8 1 10.0588235 1 10.0588235 1.82352941 8 1.82352941"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="1.82352941 1.82352941 3.47058824 1.82352941 3.47058824 1 1 1 1 3.47058824 1.82352941 3.47058824"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="5.94117647 1 7.17647059 1 7.17647059 1.82352941 5.94117647 1.82352941"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.4" fill="#000000" stroke-linecap="round" points="2.64705882 3.47058824 5.11764706 3.47058824 5.11764706 1 4.29411765 1 4.29411765 2.64705882 2.64705882 2.64705882"></polygon>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="1 4.29411765 3.47058824 4.29411765 3.47058824 5.11764706 1 5.11764706"></polygon>
+                <rect id="Rectangle" stroke="#000000" stroke-width="0.3" x="0.15" y="0.15" width="15.7" height="15.7" rx="0.8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
