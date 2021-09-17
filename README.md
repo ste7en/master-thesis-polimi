@@ -31,6 +31,7 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/marshka/ma
 ## Authors
 
 Stefano Formicola - [@ste7en](https://github.com/ste7en)
+
 Fabiana Ferrara - [@fabif11](https://github.com/fabif11)
 
 <a href="https://linkedin.com/in/steformicola">
