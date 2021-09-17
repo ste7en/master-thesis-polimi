@@ -6,6 +6,9 @@
 	Master Thesis in Computer Science and Engineering at Politecnico di Milano.
     <br/>
     <br/>
+    <a href="https://github.com/ste7en/master-thesis-polimi/releases/download/1.0-approved/master_thesis_polimi.pdf">
+     <img src="https://img.shields.io/badge/download-⬇-blue?style=for-the-badge" alt="Download"/>
+     </a>
 </p>
 
 
