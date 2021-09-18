@@ -26,7 +26,7 @@ Keywords: Human-Computer Interaction; Interaction Design; Extended Reality; Conc
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](https://github.com/marshka/master-thesis-template-polimi/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/ste7en/master-thesis-polimi/blob/master/LICENSE) for more information.
 
 
 <!-- AUTHORS -->
