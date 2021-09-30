@@ -46,17 +46,16 @@ For obvious reasons of space, this section presents an example of the XRM-based 
 \end{table}
 
 \subsubsection*{Structural Model - NURE}
-
 \emph{Actors}. The Human Actors of the NURE case study is the visitor who wants to enjoy a tour of the archaeological park (\autoref{fig:ActorsNURE}). The identified Non-Human Actors belong to the sub-hierarchies of Physical Components, Environment and Virtual Objects (\autoref{fig:NonHumanActorsNURE}). In this section we describe the Non-Human Actors at the lower level with the intention of giving a demonstration of how the Structural Model was applied. In addition, we report in the following tables some of the properties of the individual Actors. It is to be considered that the properties are intended in their initial state, since Actors, as Targets of the Interaction, undergo changes at a structural level that become evident only when they become Actuators, i.e. when the User Action has generated a certain effect on a Non-Human Actor.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=14cm]{Figures/Conceptual Model/SM_NURE1.png}
 	\caption{Actors - NURE}
 	\label{fig:ActorsNURE}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=14cm]{Figures/Conceptual Model/SM_NURE2.png}
 	\caption{Non-Human Actors - NURE}
@@ -69,44 +68,57 @@ For obvious reasons of space, this section presents an example of the XRM-based 
         \item Device: it is not explicitly present in the reported case study, however it is included because the visitor experiences the whole site through a device such as a viewer, namely Hololens.
         \item QR Code: it has been classified as an Interaction Placeholder, being an element identifiable through the camera of a device. For each QR Code an ID is assigned. The Position property is not made explicit for reasons of simplicity. In NURE it is usually used to activate the Environment.
     \end{itemize}
-    \begin{table}[h]
-    \centering
-    \begin{tabular}{|l|c|c|}
-    \hline
-    \textbf{Physical Component Properties} & \textbf{Device}     & \textbf{QR Code 3}    \\ \hline
-    Position                               & \multicolumn{2}{c|}{\textit{not specified}} \\ \hline
-    ID                                     & Hololens            & 3                     \\ \hline
-    \end{tabular}
-    \caption{Physical Component Properties - NURE}
-    \label{tab:NUREPHCproperties}
-    \end{table}
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Physical Component Properties} & \textbf{Device}     & \textbf{QR Code 3}    \\ \hline
+Position                               & \multicolumn{2}{c|}{\textit{not specified}} \\ \hline
+ID                                     & Hololens            & 3                     \\ \hline
+\end{tabular}
+\caption{Physical Component Properties - NURE}
+\label{tab:NUREPHCproperties}
+\end{table}
+
+\begin{itemize}
     \item \textbf{Environment}
     \begin{itemize}
         \item Augmented Environment: the experience is divided into several Augmented Environments. These represent scenes anchored in real world space augmented by the presence of Virtual Objects. The illustrated example starts from the visitor's entry into Augmented Environment 2 (AE 2) (Site zone 3. in \autoref{fig:ortophoto}), therefore after having already passed through Environment 1, which is indeed hidden. The Visitor continues through Environment 2.2 (AE 2.2)(Site zone 4. in \autoref{fig:ortophoto}) until entering Environment 3 (AE 3) (Site zone 5. in \autoref{fig:ortophoto}), thus after AE 2 has become hidden. 
         \autoref{tab:NUREAEproperties} does not go into detail with regard to the Position and Orientation properties of the Camera, even though both usually coincide with the observer's position.
     \end{itemize}
-    \begin{table}[h]
-    \centering
-    \begin{tabular}{|l|l|l|l|}
-    \hline
-    \textbf{Environment Properties}           & \textbf{AE 2} & \textbf{AE 2.2} & \textbf{AE 3} \\ \hline
-    Camera Position    & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
-    Camera Orientation & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
-    Visibility         & ON           & OFF           & OFF          \\ \hline
-    \textbf{Augmented Environment Properties} & \textbf{AE 2} & \textbf{AE 2.2} & \textbf{AE 3} \\ \hline
-    World Anchors      & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
-    \end{tabular}
-    \caption{Augmented Environment Properties - NURE}
-    \label{tab:NUREAEproperties}
-    \end{table}
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Environment Properties}           & \textbf{AE 2} & \textbf{AE 2.2} & \textbf{AE 3} \\ \hline
+Camera Position    & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
+Camera Orientation & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
+Visibility         & ON           & OFF           & OFF          \\ \hline
+\textbf{Augmented Environment Properties} & \textbf{AE 2} & \textbf{AE 2.2} & \textbf{AE 3} \\ \hline
+World Anchors      & \multicolumn{3}{c|}{\textit{not specified}} \\ \hline
+\end{tabular}
+\caption{Augmented Environment Properties - NURE}
+\label{tab:NUREAEproperties}
+\end{table}
+    
+\begin{itemize}
     \item \textbf{Virtual Object}
     \begin{itemize}
         \item 3D Model: it belongs to the Static Objects and is a 3D holographic representation of some of the elements that were part of the archaeological site and that have been reconstructed using computer graphics to allow visitors to learn about some of the objects of the past. 
         
         The AE 2 contains the Tomb D, the Tomb E (\autoref{fig:tombs}), the respective Covering slabs considered as a separate object in order to allow the user to move them and finally the Exterior of the Mausoleum (\autoref{fig:mausoleum}). The interior of the Mausoleum instead is part of AE 2.2, which also in this case is distinguished from the exterior in order to allow the visitor to observe the Mausoleum from both the outside and the inside. It is a design choice to separate the components and usually serves either to make the experience more interactive or to simplify the design as in the case of the Mausoleum which is layered to show the inside rather than to encourage the visitor to "walk inside".
         
-        The 3D Models are anchored to the Augmented Environment and have an absolute position, orientation and scale that are not defined for reasons of simplicity. The initial state has been set considering that AE 2 has already been triggered and all 3D Models inside are Visible. 
-        
+        The 3D Models are anchored to the Augmented Environment and have an absolute position, orientation and scale that are not defined for reasons of simplicity. The initial state has been set considering that AE 2 has already been triggered and all 3D Models inside are Visible.
+        \item Video: it is included in the Dynamic Objects and is represented in NURE as an animated 3D model that reproduces scenes of everyday life from that historical period on a loop. 
+        The visitor observes the reproduction of the Refrigerium ritual inside the Mausoleum: two women are standing in front of the tombs and two flames are lit. The first woman deposits the food content of the bowl in the first tomb and returns to her position. The second pours the liquid contents of the jug into the cup carved in the tomb in front of her. At the end the two women return to contemplate with their hands in prayer near their faces. Initially the 3D Video is not visible, it is activated later in AE 2.2.
+        \item Button: it is an Operational Object and is represented as a static 3D model that allows the visitor to choose which actions to perform among all those included in the 3D Menu. We have assigned each Button an ID which in this case coincides with the number that identifies each Augmented Environment. In NURE it is also used as an alternative to the QR Code to activate an Augmented Environment.
+    \end{itemize}
+\end{itemize}
+
         \begin{table}[h]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -186,7 +198,7 @@ For obvious reasons of space, this section presents an example of the XRM-based 
         \caption{3D Model Properties - NURE}
         \label{tab:NURE3DMproperties}
         \end{table}
-        
+
         \begin{figure}[h]
         	\centering
         	\includegraphics[width=\linewidth]{Figures/Conceptual Model/photoNURE/mausoleum.png}
@@ -200,10 +212,7 @@ For obvious reasons of space, this section presents an example of the XRM-based 
         	\caption{Tomb D and Tomb E - NURE}
         	\label{fig:tombs}
         \end{figure}
-        
-        \item Video: it is included in the Dynamic Objects and is represented in NURE as an animated 3D model that reproduces scenes of everyday life from that historical period on a loop. 
-        The visitor observes the reproduction of the Refrigerium ritual inside the Mausoleum: two women are standing in front of the tombs and two flames are lit. The first woman deposits the food content of the bowl in the first tomb and returns to her position. The second pours the liquid contents of the jug into the cup carved in the tomb in front of her. At the end the two women return to contemplate with their hands in prayer near their faces. Initially the 3D Video is not visible, it is activated later in AE 2.2.
-        
+
         \begin{table}[h]
         \centering
         \begin{tabular}{|l|c|}
@@ -225,9 +234,7 @@ For obvious reasons of space, this section presents an example of the XRM-based 
         \caption{Video Properties - NURE}
         \label{tab:NUREVideoproperties}
         \end{table}
-        
-        \item Button: it is an Operational Object and is represented as a static 3D model that allows the visitor to choose which actions to perform among all those included in the 3D Menu. We have assigned each Button an ID which in this case coincides with the number that identifies each Augmented Environment. In NURE it is also used as an alternative to the QR Code to activate an Augmented Environment. 
-        
+
         \begin{table}[h]
         \centering
         \begin{tabular}{|l|c|c|}
@@ -246,12 +253,10 @@ For obvious reasons of space, this section presents an example of the XRM-based 
         \caption{Button Properties - NURE}
         \label{tab:NUREButtonproperties}
         \end{table}
-    \end{itemize}
-\end{itemize}
 
 \subsubsection*{Behavioural Model - NURE}
-
 \emph{User Actions and Effects}. The User Actions chosen for the visitors of the archaeological park, as well as participants in the NURE experience, and the Effects generated on the respective Non-Human Actors are illustrated in the following \autoref{tab:UAENURE}.
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|l|}
@@ -283,13 +288,13 @@ The only Effect that does not have a corresponding User Action is the Visible \&
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=14cm]{Figures/Conceptual Model/IM_NURE.png}
+	\includegraphics[height=0.95\textheight]{Figures/Conceptual Model/IM_NURE.png}
 	\caption{Interaction, System Event \& Effect combination - NURE}
 	\label{fig:IM1NURE}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=12cm]{Figures/Conceptual Model/IM_NURE2.png}
+	\includegraphics[height=0.95\textheight]{Figures/Conceptual Model/IM_NURE2.png}
 	\caption{Interaction, System Event \& Effect combination - NURE}
 	\label{fig:IM2NURE}
 \end{figure}
@@ -300,13 +305,15 @@ The same reasoning applies to all combinations of Interactions/System Events wit
 
 The System Event block is also associated with an Effect: the block only includes the Target(s) in one box. The example shows how the "time expired" event set on the Interior of Mausoleum generates the playback of the Refrigerium video.
 
-\emph{Task and Activity}. At this stage, having defined all the necessary components, we move on to the configuration of the Tasks and Activity. The Tasks include both several Interactions involving the visitor exploring the Environment and its Virtual Objects and also a System Event determined by the expiration of a Timer. \autoref{fig:ActivityNURE} shows the Activity as a flowchart in which the Tasks are represented in a compacted way, therefore less detailed for obvious reasons of space. To explain the Activity in detail we use a procedure like a Use Case Scenario. 
+\emph{Task and Activity}. At this stage, having defined all the necessary components, we move on to the configuration of the Tasks and Activity. The Tasks include both several Interactions involving the visitor exploring the Environment and its Virtual Objects and also a System Event determined by the expiration of a Timer. \autoref{fig:ActivityNURE} shows the Activity as a flowchart in which the Tasks are represented in a compacted way, therefore less detailed for obvious reasons of space. To explain the Activity in detail we use a procedure like a Use Case Scenario.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=16.5cm]{Figures/Conceptual Model/NUREExample.png}
+	\includegraphics[width=\linewidth]{Figures/Conceptual Model/NUREExample.png}
 	\caption{Activity Flow - NURE}
 	\label{fig:ActivityNURE}
 \end{figure}
+
 Stefano is a 24-year-old guy studying Computer Engineering in Milan who loves art and technology. He has recently heard about the opening of the NURE Archaeological Park in its 2.0 edition. Stefano doesn't want to miss the opportunity to visit an ancient historical site that he studied in books as a child and that now seems to have taken on a completely new form thanks to the introduction of MR. He has used viewers before, but this is the first time he is using Hololens 2, which makes him very excited. 
 
 Once in Sardinia, Stefano goes to the nuragic complex and waits his turn to visit. 

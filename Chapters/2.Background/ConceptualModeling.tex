@@ -32,14 +32,14 @@ More recent research describes the interaction techniques required to perform ta
 
 Facilitating the developer's workload is one of the main arguments addressed in \cite{coninx_vr-demo_2006}, which introduces \textit{VR-Demo}, an approach that allows to design high-level \gls{VE} applications with a supporting tool. The logical structure separates the modelling of the VE and the behaviour of its components from user interactions. De Troyer et al~\cite{de_troyer_conceptual_2007} introduce a conceptual design step into the development process, allowing to achieve a level of abstraction that would enable non-experts to build VR applications. The proposed method, VR-WISE (\autoref{fig:detroyer}), contemplates a three-phase development cycle, one more than VR-DEMO. The first phase consists of \textit{conceptual specification of the domain and behaviour and the actual virtual world}. The second stage is the \textit{mapping of the domain and world} and the last is the \textit{generation} of the code. Despite the detailed modelling of concepts and behaviours, the work lacked the modelling of interactions, that is addressed in VR-DEMO. To support the interactions Berge et al.~\cite{berge_towards_2014} use a collection of links to connect the sub-tasks the user has to perform with the elements of the 3D VE involved in the task to be accomplished (\autoref{fig:berge}). The resulting analytical framework consists of two tree structures, one decomposing the user tasks into sub-tasks and an interactive scene graph showing the hierarchy of 3D objects, lights and virtual cameras. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{Figures/Background/models/detroyer.png}
     \caption{Conceptual Models - VR-WISE}
     \label{fig:detroyer}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{Figures/Background/models/bergè.png}
     \caption{Conceptual Models - Analytical Framework}
@@ -49,7 +49,7 @@ Facilitating the developer's workload is one of the main arguments addressed in 
 % AR
 As far as AR modelling is concerned, the work of Pendit et al.~\cite{chandini_pendit_conceptual_2015} is devoted to cultural heritage projects and seeks to involve the visitor in the activities, to give them positive feelings, to satisfy their needs so that the overall experience is enjoyable. The proposed conceptual model (\autoref{fig:chandini}) identifies 3 structures containing a large number of elements. The first structure includes the hardware components and the process phases of development, the second includes a set of functions that guide the visitor through the Cultural Heritage site, and the third includes the components that make learning enjoyable such as activities, interaction, personalisation and games. The intersection between the structures is a set of elements such as 3D Model, 3D Character, Text, Image and so on.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=8cm]{Figures/Background/models/ChandiniP.png}
     \caption{Conceptual Models - MARCHSTEIL}
@@ -71,7 +71,7 @@ Figueroa et al.~\cite{figueroa_conceptual_2006} provide formal specifications fo
 
 Chevallier et al.~\cite{chevaillier_semantic_2012} implement another framework (\autoref{fig:chevaillier}) based on a standard notation, precisely the UML metamodel, with several additional extensions in order to apply it to the VR domain. The choice of using an already well-known modelling language is due to the clear mechanism and the possibility to provide the necessary abstraction for both content and system oriented semantic modelling. In \cite{costabile_formal_2005} the discussed advantage of formal descriptions compared to informal ones, that can bring unwanted unforeseen events, has resulted in the definition of a formalism called ICO to support multimodal interaction techniques. Encapsulating concepts from object-oriented programming (OOP), an object is an entity through which the behaviour of an ICO can be modelled, its appearance and interactions with users can be described.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=12cm]{Figures/Background/models/chevallier.png}
     \caption{Conceptual Models - MASCARET}
@@ -80,7 +80,7 @@ Chevallier et al.~\cite{chevaillier_semantic_2012} implement another framework (
 
 Multimodal interaction techniques are the subject of the event state-driven graphical notation (\autoref{fig:vanacken}) presented by Vanacken et al.~\cite{vanacken2006nimmit}. The primitives that constitute it are states and events, the task chain that must be executed, the data that these carry through states, the transition and conditional states, the hierarchical usage and the input/output parameters.  Even in this case, a framework based on the XML schema is attached to encapsulate the primitives and execute the interactions.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{Figures/Background/models/vanacken1.png}
     \caption{Conceptual Models - NiMMiT}
@@ -89,7 +89,7 @@ Multimodal interaction techniques are the subject of the event state-driven grap
 
 Although it does not include any of the technologies relevant to this thesis, we believe it is crucial to mention the work carried out by Gianotti et al~\cite{dobbie_modeling_2020}. The conceptual model is applied to ISS, systems consisting of smart resources based on IoT devices, physical objects and software services that support human interactions. It comprises two sub-models (\autoref{fig:gianotti}), one used to describe the structural features and the other, instead, to define the behaviours and interactions between the actors that participate in the experience created for the ISS. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{Figures/Background/models/gianotti.png}
     \caption{Conceptual Models - ISS Model}
